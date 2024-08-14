@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatonmia Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="anatologo.webp" alt="Anatonmia Logo" id="logo">
+        <div class="clock"></div>
+        <div id="temporizador">00:00</div>
+        <div id="contador">Ciclos: 0</div>
+        <div id="controles">
+            <button id="iniciar">Iniciar</button>
+            <button id="pausar">Pausar</button>
+            <button id="resetear">Resetear</button>
+            <button id="ajustes">Ajustes</button>
+        </div>
+        <div id="configuracion" style="display: none;">
+            <h3>Configuración</h3>
+            <div>
+                <label for="tiempo-inicio">Tiempo inicial (segundos):</label>
+                <input type="number" id="tiempo-inicio" value="90">
+            </div>
+            <div>
+                <label for="tiempo-alerta">Tiempo de alerta (segundos):</label>
+                <input type="number" id="tiempo-alerta" value="30">
+            </div>
+            <div>
+                <label for="sonido-alerta">Sonido de alerta:</label>
+                <input type="file" id="sonido-alerta" accept="audio/*">
+            </div>
+            <div>
+                <label for="sonido-fin">Sonido de fin:</label>
+                <input type="file" id="sonido-fin" accept="audio/*">
+            </div>
+            <button id="guardar-ajustes">Guardar</button>
+        </div>
+        <div id="reinicio-temporizador"></div>
+    </div>
+    <script src="temporizador.js"></script>
+</body>
+</html>

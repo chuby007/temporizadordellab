@@ -1,0 +1,120 @@
+:root {
+    --dark-blue: #1e3a5f;
+    --light-blue: #3498db;
+    --white: #ffffff;
+    --rotation: 0deg;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+}
+
+.container {
+    background-color: rgba(30, 58, 95, 0.8);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+#temporizador {
+    font-size: 4rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 10px solid var(--light-blue);
+    border-radius: 50%;
+    position: relative;
+    margin: 1rem auto;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 90px;
+    background-color: var(--light-blue);
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(var(--rotation));
+    transition: transform 0.5s linear;
+}
+
+#contador {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--light-blue);
+}
+
+#controles button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    background-color: var(--light-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#controles button:hover {
+    background-color: #2980b9;
+}
+
+#configuracion {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+#configuracion div {
+    margin-bottom: 0.5rem;
+}
+
+#configuracion label {
+    display: inline-block;
+    width: 200px;
+}
+
+#configuracion input {
+    padding: 0.3rem;
+    border-radius: 3px;
+    border: 1px solid var(--light-blue);
+}
+
+#guardar-ajustes {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--light-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reinicio-temporizador {
+    color: var(--light-blue);
+    font-weight: bold;
+    margin-top: 1rem;
+}
